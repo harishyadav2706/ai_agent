@@ -2,3 +2,15 @@ pandas
 langchain-ollama
 langchain_core
 gradio
+langchain-google-genai
+pillow
+python-dotenv
+IPython
+browser-use
+tavily-python
+crawl4ai
+langgraph
+langsmith
+tool_calling_llm
+langchain-community
+duckduckgo-search
