@@ -2,7 +2,7 @@ from typing import Annotated
 
 from typing_extensions import TypedDict
 from tavily import TavilyClient
-from langgraph.graph import StateGraph, START
+from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langchain_ollama.llms import OllamaLLM
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -28,6 +28,9 @@ def chatbot(state: State):
 graph_builder.add_node("chatbot", chatbot)
 
 graph_builder.add_edge(START, "chatbot")
+graph_builder.add_edge("chatbot",END )
+
+
 
 graph = graph_builder.compile()
 
